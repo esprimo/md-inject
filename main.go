@@ -95,7 +95,7 @@ Usage:
 
 Examples:
   $ cat foo.txt | md-inject README.md
-  $ ./foo --help 2>&1 | md-inject --template='{{ printf "`+"```plaintext\\n%s```"+`" .stdin }}' readme.md
+  $ ./foo --help 2>&1 | md-inject --template='{{ printf "`+"```text\\n%s```"+`" .stdin }}' readme.md
   $ ls -1 | md-inject --fail-on-diff readme.md
 
 Options:
