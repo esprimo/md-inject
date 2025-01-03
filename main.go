@@ -21,7 +21,7 @@ type config struct {
 const (
 	tagStartFormat        = "<!-- START md-inject:%s -->"
 	tagEndFormat          = "<!-- END md-inject:%s -->"
-	defaultOutputTemplate = "{ .stdin }"
+	defaultOutputTemplate = "{{ .stdin }}"
 	defaultTagID          = "default"
 )
 

@@ -25,7 +25,7 @@ Options:
   -print-only
     	print the final output to stdout (this does not write anything to the file)
   -template string
-    	Go template to apply to the stdin before injecting (default "{ .stdin }")
+    	Go template to apply to the stdin before injecting (default "{{ .stdin }}")
 ```
 <!-- END md-inject:default -->
 
