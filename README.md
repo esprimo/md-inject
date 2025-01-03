@@ -32,7 +32,7 @@ Options:
 The code block above is automatically generated with:
 
 ```console
-$ md-inject --help 2>&1 | md-inject --template='{{ printf "```console\n$ md-inject --help\n%s```" .stdin }}'  README.md
+$ md-inject --help 2>&1 | md-inject --template='{{ printf "```console\n$ md-inject --help\n%s```" .stdin }}' README.md
 README.md successfully updated!
 ```
 
