@@ -1,6 +1,6 @@
 # md-inject
 
-Keep markdown files up to date by automatically injecting content into them.
+Keep documentation up to date by injecting command output into readmes and other markdown files.
 
 ## Usage
 
@@ -14,7 +14,7 @@ Usage:
 
 Examples:
   $ cat foo.txt | md-inject README.md
-  $ ./foo --help 2>&1 | md-inject --template='{{ printf "```plaintext\n%s```" .stdin }}' readme.md
+  $ ./foo --help 2>&1 | md-inject --template='{{ printf "```text\n%s```" .stdin }}' readme.md
   $ ls -1 | md-inject --fail-on-diff readme.md
 
 Options:
