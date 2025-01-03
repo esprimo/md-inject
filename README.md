@@ -14,7 +14,7 @@ Usage:
 
 Examples:
   $ cat foo.txt | md-inject README.md
-  $ ./foo --help 2>&1 | md-inject --output-template='{{ printf "```plaintext\n%s```" .content }}' readme.md
+  $ ./foo --help 2>&1 | md-inject --template='{{ printf "```plaintext\n%s```" .stdin }}' readme.md
   $ ls -1 | md-inject --fail-on-diff readme.md
 
 Options:
@@ -32,7 +32,7 @@ Options:
 The code block above is generated with:
 
 ```console
-$ md-inject --help 2>&1 | md-inject --template='{{ printf "```console\n$ md-inject --help\n%s```" .stdin }}' README.md
+$ md-inject --help 2>&1 | md-inject --template=$'```console\n$ md-inject --help\n{{ .stdin }}```' README.md
 README.md successfully updated!
 ```
 
